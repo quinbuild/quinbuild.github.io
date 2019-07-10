@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png">
+    <title>Login | Sign documents online</title>
+    <!-- Ion icons -->
+    <link href="assets/fonts/ionicons/css/ionicons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/simcify.min.css" rel="stylesheet">
+    <!-- Signer CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="login-card mb-30">
+        <img src="assets/images/logo.png" class="img-responsive">
+        <!-- <a class="btn btn-block btn-success m-t-50" href="">Sign as a Guest</a> -->
+        <div class="sign-in">
+            <h5 class="mb-30">Sign in to your account </h5>
+            <form class="text-left simcy-form" action="" data-parsley-validate="" loader="true" method="POST">
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="email" value="demo@Quinbuild.com" placeholder="Email address" required>
+                        <input type="hidden" name="csrf-token" value="<?=csrf_token();?>" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Password</label>
+                        <input type="Password" class="form-control" value="passqw" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <p style="color:white">.</p>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <p class="pull-left m-t-5"><a href="javascript:void(0)" target="forgot-password">Forgot password?</a></p>
+                        <a href="dashboard.html" class="btn btn-primary pull-right" type="submit" name="login">Sign In</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="sign-up" style="display: none;">
+            <h5 class="mb-30">Create a free account</h5>
+
+            <form class="text-left simcy-form" action="" data-parsley-validate="" loader="true" method="POST">
+                <div class="form-group">
+                    <div class="col-md-6 p-l-o">
+                        <label>First name</label>
+                        <input type="text" class="form-control" name="fname" placeholder="First name" required>
+                        <input type="hidden" name="csrf-token" value="<?=csrf_token();?>" />
+                    </div>
+                    <div class="col-md-6 p-r-o">
+                        <label>Last name</label>
+                        <input type="text" class="form-control" name="lname" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Company Name</label>
+                        <input type="text" class="form-control" name="company" placeholder="Company Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 p-l-o">
+                        <label>New Password</label>
+                        <input type="Password" class="form-control" name="password" data-parsley-required="true" data-parsley-minlength="6" data-parsley-error-message="Password is too short!" id="password" placeholder="New Password">
+                    </div>
+                    <div class="col-md-6 p-r-o">
+                        <label>Confirm Password</label>
+                        <input type="Password" class="form-control" data-parsley-required="true" data-parsley-equalto="#password" data-parsley-error-message="Passwords don't Match!" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <p style="color:white">.</p>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <p class="pull-left m-t-5"><a href="javascript:void(0)" target="sign-in">Sign In?</a></p>
+                        <button class="btn btn-primary pull-right" type="submit">Create account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="forgot-password" style="display: none;">
+            <h5 class="mb-30">Forgot password? don't worry, we'll <br>send your a reset link.</h5>
+            <form class="text-left simcy-form" action="<?=url("Auth@forgot");?>" method="POST" data-parsley-validate="" loader="true">
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Email address</label>
+                        <input type="text" class="form-control" name="email" placeholder="Email address" required>
+                        <input type="hidden" name="csrf-token" value="<?=csrf_token();?>" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <p class="pull-left m-t-5"><a href="javascript:void(0)" target="sign-in">Sign In?</a></p>
+                        <button class="btn btn-primary pull-right" type="submit">Send Email</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="reset-password" style="display: none;">
+            <h5 class="mb-30">Enter your new password.</h5>
+
+            <form class="text-left simcy-form" action="" method="POST" data-parsley-validate="" loader="true">
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>New Password</label>
+                        <input type="Password" class="form-control" name="password" data-parsley-required="true" data-parsley-minlength="6" data-parsley-error-message="Password is too short!" id="new-password" placeholder="New Password">
+                        <input type="hidden" name="csrf-token" value="<?=csrf_token();?>" />
+                        <input type="hidden" name="token" value="{{ $token }}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <label>Confirm Password</label>
+                        <input type="Password" class="form-control" data-parsley-required="true" data-parsley-equalto="#new-password" data-parsley-error-message="Passwords don't Match!" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 p-lr-o">
+                        <p class="pull-left m-t-5"><a href="javascript:void(0)" target="sign-in">Sign In?</a></p>
+                        <button class="btn btn-primary pull-right" type="submit" name="reset">Reset password</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p style="color:white">.</p>
+        <div class="m-t-5">
+            <a class="btn btn-block btn-primary-ish m-t-50 sign-up-btn" href="javascript:void(0)" target="sign-up">Create an account</a>
+        </div>
+        
+        <div class="copyright">
+            <p class="text-center">2019 &copy; Quinbuild | All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js//jquery.slimscroll.min.js"></script>
+    <script src="assets/js/simcify.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
