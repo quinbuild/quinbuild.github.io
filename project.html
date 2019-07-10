@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create Digital signatures and Sign PDF documents online.">
+    <meta name="author" content="Simcy Creative">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+    <title>Thika Mansion | Quinbuild</title>
+    <!-- Ion icons -->
+    <link href="assets/fonts/ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono:400,400i,700|Charm:400,700|EB+Garamond:400,400i,700|Noto+Sans+TC:400,700|Open+Sans:400,400i,700|Pacifico|Reem+Kufi|Scheherazade:400,700|Tajawal:400,700&amp;subset=arabic" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet">
+    <link href="assets/libs/tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="assets/css/simcify.min.css" rel="stylesheet">
+    <link href="assets/libs/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css" />
+    <!-- Signer CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/jscolor.js"></script>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84926915-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84926915-3');
+    </script>
+
+    <header>
+        <!-- Hambager -->
+        <div class="humbager">
+            <i class="ion-navicon-round"></i>
+        </div>
+        <!-- logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="assets/images/logo.png" class="img-responsive">
+            </a>
+        </div>
+
+        <!-- search -->
+        <div class="header-search hidden-xs">
+            <form action="/documents/">
+                <span class="search-icon">
+                    <i class="ion-android-search"></i>
+                </span>
+                <input type="text" name="search" value="" class="search-field" placeholder="Search for projects">
+            </form>
+        </div>
+
+        <!-- top right -->
+        <ul class="nav header-links pull-right">
+            <li class="notify  hidden-xs">
+                <a href="/notifications/" class="notification-holder">
+                    <span class="notifications">
+                        <i class="notifications-count ion-ios-bell"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="profile">
+                <div class="dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="profile-name"> <span class="hidden-xs"> Jogli  </span> <i class="ion-ios-arrow-down"></i> </span>
+                    <span class="avatar">
+                                                        <img src="assets/images/avatar.png" class="user-avatar img-circle">
+                                                    </span>
+                    </span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation">
+                            <a role="menuitem" href="settings.html">
+                                <i class="ion-ios-person-outline"></i> Profile</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" href="settings.html">
+                                <i class="ion-ios-gear-outline"></i> Settings</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" href="login.html">
+                                <i class="ion-ios-arrow-right"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- sidebar -->
+<div class="left-bar">
+        <div class="slimscroll-menu">
+            <li>
+                <a href="dashboard.html">
+                    <label class="menu-icon"><i class="ion-ios-speedometer"></i> </label><span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="companies.html" class="notification-holder">
+                    <label class="menu-icon"><i class="ion-ios-bell"></i> </label><span class="text">Companies</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="projects.html">
+                    <label class="menu-icon"><i class="ion-document-text"></i> </label><span class="text">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="labour.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Labour</span>
+                </a>
+            </li>
+            <li>
+                <a href="subcontractors.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Sub-contractors</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="materials.html">
+                    <label class="menu-icon"><i class="ion-ios-flower"></i> </label><span class="text">Materials Used</span>
+                </a>
+            </li>
+            <li>
+                <a href="visits.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Site Visits</span>
+                </a>
+            </li>
+            <li>
+                <a href="stock.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Stock Transfer</span>
+                </a>
+            </li>
+            <li>
+                <a href="clients.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Clients</span>
+                </a>
+            </li>
+            <li>
+                <a href="suppliers.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Suppliers</span>
+                </a>
+            </li>
+            <li>
+                <a href="workshops.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Workshops</span>
+                </a>
+            </li>
+            <li>
+                <a href="staff.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Staff</span>
+                </a>
+            </li>
+            <li>
+                <a href="inventory.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="reports.html">
+                    <label class="menu-icon"><i class="ion-coffee"></i> </label><span class="text">Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <label class="menu-icon"><i class="ion-gear-a"></i> </label><span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="permissions.html">
+                    <label class="menu-icon"><i class="ion-gear-a"></i> </label><span class="text">Permissions</span>
+                </a>
+            </li>
+        </div>
+    </div>
+    <div class="content">
+        <div class="page-title" style="overflow:visible;">
+            <div class="pull-right page-actions">
+                <button class="btn btn-success btn-responsive"><i class="ion-checkmark"></i>Mark as Complete</button>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle btn-responsive" data-toggle="dropdown"><i class="ion-arrow-down-b"></i> More </button>
+                    <ul class="dropdown-menu document-menu">
+                        <li><a href="" data-toggle="modal" data-target="#sendFile" data-backdrop="static" data-keyboard="false"><i class="ion-ios-email-outline"></i> <span>Edit</span></a></li>
+                        <li class="divider"></li>
+
+                        <li><a href="" class="send-to-server-click" data="source:viewer|file:1101|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/documents/delete/file/" warning-title="Are you sure?" warning-message="This file will be deleted and can't be recovered." warning-button="Continue" loader="true"><i class="ion-ios-trash-outline"></i> <span>Delete</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="title-responsive">Thika Mansion</h3>
+            <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                    <div class="signer-document">
+                        <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Requests</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createRequest" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Request</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Total</th>
+                                            <th>Date</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>Ben Kamau</strong>
+                                                <td>Kes. 15,000/-</td>
+                                                <td><strong>Requested: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="label label-success">Approved</span>
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>June Kamau</strong>
+                                                <td>Kes. 150,000/-</td>
+                                                <td><strong>Requested: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="label label-warning">Pending</span>
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>Ben Kamau</strong>
+                                                <td>Kes. 15,000/-</td>
+                                                <td><strong>Requested: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="label label-danger">Rejected</span>
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Materials Used</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createMaterial" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Material</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th class="text-center">Unit</th>
+                                            <th>Date</th>
+                                            
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>50kg Cement</strong>
+                                                <td>2</td>
+                                                <td>Bags</td>
+                                                <td><strong>Added: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                            <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Project Stock</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createStock" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Stock</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th class="text-center">Unit</th>
+                                            <th>Date</th>
+                                            
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>50kg Cement</strong>
+                                                <td>2</td>
+                                                <td>Bags</td>
+                                                <td><strong>Added: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                            <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Labour</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createLabourer" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Labourer</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Date Added</th>
+                                            
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong>Ben Kamau</strong>
+                                                <td>254729553498</td>
+                                                <td><strong>Added: </strong>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                            <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Work Done</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createWork" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Work Done</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Image</th>
+                                            <th>Description</th>
+                                            <th>Date</th>
+                                            
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong><a href="assets/images/ikjasbnnmkmkasdd.jpg">aisuhuidhsiuhuhuiasdfd.jpg</a></strong></td>
+                                                <td>Lorem ipsum is placeholder text commonly used in the graphic, </td>
+                                                <td>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="light-card table-responsive p-b-3em">
+                                <div class="page-title">
+                                    <h3>Documents</h3><button class="btn btn-primary" data-toggle="modal" data-target="#createDocument" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Document</button>
+                                </div>
+                
+                                <table id="signer-datatable" class="table display companies-list">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Title</th>
+                                            <th>Document</th>
+                                            <th>Date</th>
+                                            
+                                            <th class="text-center w-70">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <strong><a href="assets/images/ikjasbnnmkmkasdd.jpg">aisuhuidhsiuhuhuiasdfd.pdf</a></strong></td>
+                                                <td>Lorem ipsum is placeholder , </td>
+                                                <td>July 10, 2019. 13:04
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="dropdown">
+                                                        <span class="company-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more"></i></span>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li role="presentation">
+                                                                <a class="send-to-server-click" data="requestid:503|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/requests/delete/" warning-title="Are you sure?" warning-message="This request will be deleted parmanently." warning-button="Delete Now" loader="true" href="">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 document-right-side">
+
+                <div class="light-card document-right">
+                    <div class="document-right-head">
+                        <ul>
+                            <li class="active"><a data-toggle="tab" href="#history">Activity Log</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="history" class="tab-pane fade in active">
+
+                            <div class="timeline">
+                                <div class="circle"></div>
+                                <ul>
+                                    <li class="default"><em class="text-xs">July 5, 2019 12:28</em> Report filed by <span class="text-primary">Jogli Kipkoech</span>.</li>
+                                    <li class="success"><em class="text-xs">July 5, 2019 12:35</em> <span class="text-primary"> Jane Accounts</span>approved request</li>
+                                    <li class="default"><em class="text-xs">July 6, 2019 23:15</em> Benard Driver <span class="text-primary">delivered stock</span> by <span class="text-primary">Daniel  kimeli</span>.</li>
+                                    <li class="default"><em class="text-xs">July 6, 2019 23:15</em> <span class="text-primary">Jogli</span> added a labourer.</li>
+                                    <li class="default"><em class="text-xs">July 6, 2019 23:15</em> <span class="text-primary">Mike Admin</span> approved a request.</li>
+
+                                </ul>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="createRequest" role="dialog">
+        <div class="close-modal" data-dismiss="modal">&times;</div>
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a New Request</h4>
+                </div>
+                <form class="simcy-form" action="" data-parsley-validate="" loader="true" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <p>Fill in request details</p>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Material</label>
+                                    <input type="text" class="form-control" name="title" placeholder="Material" data-parsley-required="true">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Quantity</label>
+                                    <input type="number" class="form-control" name="quantity" placeholder="Quantity" data-parsley-required="true">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Unit</label>
+                                    <input type="text" class="form-control" name="unit" placeholder="Unit" data-parsley-required="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Note</label>
+                                    <textarea class="form-control" placeholder="Description" rows="7"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Make Request</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p class="text-right">&copy; 2019 Quinbuild | All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+        var countNotificationsUrl = '/notifications/count/';
+    </script>
+
+    <!-- scripts -->
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
+    <!--datatables-->
+    <script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+    <!--libraries-->
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js//jquery.slimscroll.min.js"></script>
+    <script src="assets/js/simcify.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="assets/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#signer-datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5'
+                ]
+            });
+        });
+    </script>
+</body>
+</body>
+
+</html>

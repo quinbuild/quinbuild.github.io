@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create Digital signatures and Sign PDF documents online.">
+    <meta name="author" content="Simcy Creative">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png">
+    <title>Projects | Quinbuild</title>
+    <!-- Ion icons -->
+    <link href="assets/fonts/ionicons/css/ionicons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/simcify.min.css" rel="stylesheet">
+    <!-- Signer CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header start -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84926915-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84926915-3');
+    </script>
+
+    <header>
+        <!-- Hambager -->
+        <div class="humbager">
+            <i class="ion-navicon-round"></i>
+        </div>
+        <!-- logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="assets/images/logo.png" class="img-responsive">
+            </a>
+        </div>
+
+        <!-- search -->
+        <div class="header-search hidden-xs">
+            <form action="/documents/">
+                <span class="search-icon">
+                    <i class="ion-android-search"></i>
+                </span>
+                <input type="text" name="search" value="" class="search-field" placeholder="Search for projects">
+            </form>
+        </div>
+
+        <!-- top right -->
+        <ul class="nav header-links pull-right">
+            <li class="notify  hidden-xs">
+                <a href="/notifications/" class="notification-holder">
+                    <span class="notifications">
+                        <i class="notifications-count ion-ios-bell"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="profile">
+                <div class="dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="profile-name"> <span class="hidden-xs"> Jogli  </span> <i class="ion-ios-arrow-down"></i> </span>
+                    <span class="avatar">
+                                                        <img src="assets/images/avatar.png" class="user-avatar img-circle">
+                                                    </span>
+                    </span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation">
+                            <a role="menuitem" href="settings.html">
+                                <i class="ion-ios-person-outline"></i> Profile</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" href="settings.html">
+                                <i class="ion-ios-gear-outline"></i> Settings</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" href="login.html">
+                                <i class="ion-ios-arrow-right"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- sidebar -->
+    <div class="left-bar">
+        <div class="slimscroll-menu">
+            <li>
+                <a href="dashboard.html">
+                    <label class="menu-icon"><i class="ion-ios-speedometer"></i> </label><span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="companies.html" class="notification-holder">
+                    <label class="menu-icon"><i class="ion-ios-bell"></i> </label><span class="text">Companies</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="projects.html">
+                    <label class="menu-icon"><i class="ion-document-text"></i> </label><span class="text">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="labour.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Labour</span>
+                </a>
+            </li>
+            <li>
+                <a href="subcontractors.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Sub-contractors</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="materials.html">
+                    <label class="menu-icon"><i class="ion-ios-flower"></i> </label><span class="text">Materials Used</span>
+                </a>
+            </li>
+            <li>
+                <a href="visits.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Site Visits</span>
+                </a>
+            </li>
+            <li>
+                <a href="stock.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Stock Transfer</span>
+                </a>
+            </li>
+            <li>
+                <a href="clients.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Clients</span>
+                </a>
+            </li>
+            <li>
+                <a href="suppliers.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Suppliers</span>
+                </a>
+            </li>
+            <li>
+                <a href="workshops.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Workshops</span>
+                </a>
+            </li>
+            <li>
+                <a href="staff.html">
+                    <label class="menu-icon"><i class="ion-ios-people"></i> </label><span class="text">Staff</span>
+                </a>
+            </li>
+            <li>
+                <a href="inventory.html">
+                    <label class="menu-icon"><i class="ion-person"></i> </label><span class="text">Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="reports.html">
+                    <label class="menu-icon"><i class="ion-coffee"></i> </label><span class="text">Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <label class="menu-icon"><i class="ion-gear-a"></i> </label><span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="permissions.html">
+                    <label class="menu-icon"><i class="ion-gear-a"></i> </label><span class="text">Permissions</span>
+                </a>
+            </li>
+        </div>
+    </div>
+    <div class="content">
+        <div class="page-title">
+            <div class="pull-right page-actions lower">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#create" data-backdrop="static" data-keyboard="false"><i class="ion-plus-round"></i> Add Project</button>
+            </div>
+            <div>
+                <h3>Projects</h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-md-4">
+                <div class="light-card team-card-info text-center">
+                    <img src="assets/images/project.jpg" class="img-circle">
+                    <h4>Thika Mansion</h4>
+                    <p>Thika</p>
+                    <div class="team-card-extra">
+                        <p class="pull-left">
+                            Started: 15th July 2019
+                        </p>
+                        <div class="dropup">
+                            <span class="team-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more-outline"></i></span>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a href="project.html" class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">View</a></li>
+                                <li role="presentation"><a class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">Edit</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a class="send-to-server-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/delete/" warning-title="Are you sure?" warning-message="This member's profile and data will be deleted." warning-button="Continue" loader="true" href="">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="light-card team-card-info text-center">
+                    <img src="assets/images/project.jpg" class="img-circle">
+                    <h4>Konza Estate</h4>
+                    <p>Thika</p>
+                    <div class="team-card-extra">
+                        <p class="pull-left">
+                            Started: 15th March 2019
+                        </p>
+                        <div class="dropup">
+                            <span class="team-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more-outline"></i></span>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a href="project.html" class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">View</a></li>
+                                <li role="presentation"><a class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">Edit</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a class="send-to-server-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/delete/" warning-title="Are you sure?" warning-message="This member's profile and data will be deleted." warning-button="Continue" loader="true" href="">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="light-card team-card-info text-center">
+                    <img src="assets/images/project.jpg" class="img-circle">
+                    <h4>Kabete Mansion</h4>
+                    <p>Thika</p>
+                    <div class="team-card-extra">
+                        <p class="pull-left">
+                            Started: 15th May 2019
+                        </p>
+                        <div class="dropup">
+                            <span class="team-action dropdown-toggle" data-toggle="dropdown"><i class="ion-ios-more-outline"></i></span>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a href="project.html" class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">View</a></li>
+                                <li role="presentation"><a class="fetch-display-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/update/view/" holder=".update-holder" modal="#update" href="">Edit</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a class="send-to-server-click" data="memberid:327|csrf-token:25ca501a82359c4e400a279cc438bb0561dcae94b33ab4e78f9caf0c78e02733" url="/team/delete/" warning-title="Are you sure?" warning-message="This member's profile and data will be deleted." warning-button="Continue" loader="true" href="">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--Add Team Member-->
+    <div class="modal fade" id="create" role="dialog">
+        <div class="close-modal" data-dismiss="modal">&times;</div>
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a New Project</h4>
+                </div>
+                <form class="simcy-form" action="" data-parsley-validate="" loader="true" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <p>Fill in project details</p>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <label>Project Title</label>
+                                    <input type="text" class="form-control" name="title" placeholder="Title" data-parsley-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Start Date</label>
+                                    <input type="date" class="form-control" name="start_date" placeholder="date" data-parsley-required="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Expected date of completion</label>
+                                    <input type="date" class="form-control" name="end_date" placeholder="Expected date of completion" data-parsley-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Location</label>
+                                    <input type="text" class="form-control" name="location" placeholder="Location">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Budget</label>
+                                    <input type="number" class="form-control" name="budget" placeholder="Budget" data-parsley-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Profit Margin</label>
+                                    <input type="number" class="form-control" name="profit" placeholder="Profit Margin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Client</label>
+                                    <select class="form-control">
+                                        <option>Jogli Kip</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Description</label>
+                                    <textarea class="form-control" placeholder="Description" rows="7"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Create Project</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Update Team Member Modal -->
+    <div class="modal fade" id="update" role="dialog">
+        <div class="close-modal" data-dismiss="modal">&times;</div>
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Team Account </h4>
+                </div>
+                <form class="update-holder simcy-form" action="/team/update/" data-parsley-validate="" loader="true" method="POST" enctype="multipart/form-data">
+                    <div class="loader-box">
+                        <div class="circle-loader"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <p class="text-right">&copy; 2019 SIgner Inc | All Rights Reserved. Ver 3.2</p>
+    </footer>
+
+    <script type="text/javascript">
+        var countNotificationsUrl = '/notifications/count/';
+    </script>
+
+    <!-- Modals -->
+
+    <!-- add team modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="addTeam" role="dialog">
+        <div class="close-modal" data-dismiss="modal">&times;</div>
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Team Member</h4>
+                </div>
+                <form class="add-team-form" action="files/ajaxProcesses.php" method="post" enctype="multipart/form-data" data-parsley-validate="">
+                    <div class="modal-body">
+                        <div class="alert alert-info alert-dismissable text-center saving" style="display: none;">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <i class="ion-loading-c"></i> Saving...
+                        </div>
+                        <p>Fill in team member's details.</p>
+                        <div class="form-group">
+                            <div class="col-md-6 p-l-o">
+                                <label>First name</label>
+                                <input type="text" class="form-control" name="fname" placeholder="First name" data-parsley-required="true">
+                                <input type="hidden" name="action" value="addTeam">
+                            </div>
+                            <div class="col-md-6 p-r-o">
+                                <label>Last name</label>
+                                <input type="text" class="form-control" name="lname" placeholder="Last name" data-parsley-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 p-l-o">
+                                <label>Email address</label>
+                                <input type="email" class="form-control" name="email" placeholder="Email address" data-parsley-required="true">
+                            </div>
+                            <div class="col-md-6 p-r-o">
+                                <label>Phone number</label>
+                                <input type="text" class="form-control" name="phone" placeholder="Phone number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 p-l-o">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" data-parsley-required="true" data-parsley-minlength="6" data-parsley-error-message="Password is too short!">
+                            </div>
+                            <div class="col-md-6 p-r-o">
+                                <label>Confirm password</label>
+                                <input type="password" class="form-control" placeholder="Confirm password" data-parsley-required="true" data-parsley-equalto="#password" data-parsley-error-message="Passwords don't Match!">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 p-lr-o">
+                                <label>Profile picture <span class="text-muted text-xs">Atleast 200x200</span></label>
+                                <input type="file" name="avatar" class="dropify" data-default-file="uploads/avatar/avatar.png" data-min-width="199" data-min-height="199" data-allowed-file-extensions="png jpg">
+                            </div>
+                        </div>
+                        <div class="form-group permissions">
+                            <div class="col-md-12 p-l-o">
+                                <label>Permissions</label>
+                            </div>
+                            <div class="col-md-4 p-l-o">
+                                <input type="checkbox" class="js-switch" name="permissions[]" value="upload" checked readonly /> Can upload
+                            </div>
+                            <div class="col-md-4">
+                                <input type="checkbox" class="js-switch" name="permissions[]" value="sign" checked /> Can sign
+                            </div>
+                            <div class="col-md-4 p-r-o">
+                                <input type="checkbox" class="js-switch" name="permissions[]" value="delete" checked /> Can delete
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add Team Member</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- add team modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="editTeam" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit account information </h4>
+                </div>
+                <form class="edit-team-form" action="files/ajaxProcesses.php" method="post" enctype="multipart/form-data" data-parsley-validate="">
+                    <div class="modal-body">
+
+                        <p>Update in team member's details.</p>
+
+                        <div class="alert alert-info alert-dismissable text-center saving" style="display: none;">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <i class="ion-loading-c"></i> Saving...
+                        </div>
+                        <div class="center-notify">
+                            <i class="ion-loading-c"></i>
+                        </div>
+                        <div class="edit-fields"></div>
+
+                    </div>
+                    <div class="modal-footer" style="display: none;">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js//jquery.slimscroll.min.js"></script>
+    <script src="assets/js/simcify.min.js"></script>
+    <!-- custom scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
